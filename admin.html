@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinic Admin Portal - Jain Dentofacial Hub</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔑</text></svg>">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS for Admin -->
+  <link rel="stylesheet" href="admin-style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       ADMIN SIDEBAR / HEADER
+       ========================================================================== -->
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">J</div>
+        <div>
+          <h2>Jain Hub</h2>
+          <span>CLINIC PORTAL</span>
+        </div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#" class="nav-item active" onclick="switchAdminSection('dashboard', this)"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+          <li><a href="#" class="nav-item" onclick="switchAdminSection('appointments', this)"><i class="fa-solid fa-calendar-check"></i> Appointments <span class="badge-count" id="badgeAppCount">0</span></a></li>
+          <li><a href="#" class="nav-item" onclick="switchAdminSection('reviews', this)"><i class="fa-solid fa-star"></i> Patient Reviews <span class="badge-count" id="badgeReviewCount">0</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p><i class="fa-solid fa-user-doctor"></i> Dr. Surbhi Pande</p>
+        <a href="index.html" class="back-to-site"><i class="fa-solid fa-arrow-left"></i> View Live Site</a>
+      </div>
+    </aside>
+
+    <!-- ==========================================================================
+         MAIN CONTENT AREA
+         ========================================================================== -->
+    <main class="admin-main">
+      <header class="admin-header">
+        <div class="header-title">
+          <h1 id="pageTitle">Admin Dashboard</h1>
+          <p id="pageSubtitle">Overview of clinic appointments and patient reviews</p>
+        </div>
+        <div class="header-actions">
+          <button class="btn-seed" onclick="seedDemoData()"><i class="fa-solid fa-database"></i> Reset Demo Data</button>
+        </div>
+      </header>
+
+      <!-- ==========================================================================
+           SECTION: DASHBOARD OVERVIEW
+           ========================================================================== -->
+      <section class="admin-section active" id="section-dashboard">
+        <!-- Stats Cards Grid -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="card-icon blue"><i class="fa-solid fa-calendar-days"></i></div>
+            <div class="card-info">
+              <h3 id="statTotalApps">0</h3>
+              <p>Total Bookings</p>
+            </div>
+          </div>
+          
+          <div class="stat-card">
+            <div class="card-icon gold"><i class="fa-solid fa-hourglass-start"></i></div>
+            <div class="card-info">
+              <h3 id="statPendingApps">0</h3>
+              <p>Pending Review</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="card-icon green"><i class="fa-solid fa-star"></i></div>
+            <div class="card-info">
+              <h3 id="statTotalReviews">0</h3>
+              <p>Patient Reviews</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="card-icon purple"><i class="fa-solid fa-ranking-star"></i></div>
+            <div class="card-info">
+              <h3 id="statAvgRating">4.8</h3>
+              <p>Average Rating</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Summary Lists -->
+        <div class="dashboard-details-grid">
+          <!-- Recent Appointments -->
+          <div class="details-card">
+            <div class="card-header">
+              <h3>Recent Bookings</h3>
+              <a href="#" class="view-all-link" onclick="triggerNavClick(1)">View All</a>
+            </div>
+            <div class="table-container">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Patient Name</th>
+                    <th>Requested Service</th>
+                    <th>Date / Time</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="dashboardRecentAppointments">
+                  <!-- Dynamically populated -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Pending Reviews to Reply -->
+          <div class="details-card">
+            <div class="card-header">
+              <h3>Pending Review Replies</h3>
+              <a href="#" class="view-all-link" onclick="triggerNavClick(2)">View All</a>
+            </div>
+            <div class="pending-reviews-list" id="dashboardRecentReviews">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION: APPOINTMENTS PANEL
+           ========================================================================== -->
+      <section class="admin-section" id="section-appointments">
+        <div class="panel-card">
+          <div class="panel-header">
+            <div class="search-filters">
+              <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="appSearchInput" placeholder="Search patient name..." onkeyup="filterAppointments()">
+              </div>
+              <select class="filter-select" id="appFilterStatus" onchange="filterAppointments()">
+                <option value="All">All Statuses</option>
+                <option value="Pending">Pending Approval</option>
+                <option value="Confirmed">Confirmed</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="table-container">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Patient Info</th>
+                  <th>Service Requested</th>
+                  <th>Date &amp; Slot</th>
+                  <th>Status</th>
+                  <th style="text-align:right;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="appointmentsTableBody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION: REVIEWS PANEL
+           ========================================================================== -->
+      <section class="admin-section" id="section-reviews">
+        <div class="panel-card">
+          <div class="panel-header">
+            <div class="search-filters">
+              <select class="filter-select" id="reviewFilterRating" onchange="filterReviews()">
+                <option value="All">All Ratings</option>
+                <option value="5">5 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="3">3 Stars &amp; below</option>
+              </select>
+              <select class="filter-select" id="reviewFilterReply" onchange="filterReviews()">
+                <option value="All">All Reviews</option>
+                <option value="Unreplied">Unreplied Only</option>
+                <option value="Replied">Replied Only</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="reviews-admin-list" id="reviewsTableBody">
+            <!-- Dynamically populated cards -->
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ==========================================================================
+       REPLY MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="replyModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Reply to Patient Review</h3>
+        <button class="modal-close" onclick="closeReplyModal()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <form id="replyForm" onsubmit="saveReviewReply(event)">
+          <input type="hidden" id="replyReviewId">
+          <div class="review-preview-text">
+            <p><strong>Patient Rating:</strong> <span id="modalReviewRating" style="color:var(--accent);">⭐⭐⭐⭐⭐</span></p>
+            <p><strong>Patient Comment:</strong></p>
+            <p class="comment-quote" id="modalReviewText">"This is a review comment..."</p>
+          </div>
+          
+          <div class="form-group">
+            <div class="reply-header-row">
+              <label for="replyTextarea">Write Reply</label>
+              <button type="button" class="btn-use-template" onclick="applyReplyTemplate()"><i class="fa-solid fa-wand-magic-sparkles"></i> Use Positive Template</button>
+            </div>
+            <textarea id="replyTextarea" rows="6" class="form-input" required placeholder="Type reply here..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Save &amp; Post Response <i class="fa-solid fa-check"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification element -->
+  <div class="toast" id="toastNotification">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMessage">Success Message!</span>
+  </div>
+
+  <!-- Custom Admin JS -->
+  <script src="admin-script.js"></script>
+</body>
+</html>
