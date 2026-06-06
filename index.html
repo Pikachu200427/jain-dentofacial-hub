@@ -3,796 +3,343 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jain Dentofacial Hub — Dr. Surbhi Pande | Best Dentist & Orthodontist in Shanti Nagar, Nagpur</title>
-  <meta name="description" content="4.8★ rated dental clinic in Shanti Nagar, Nagpur. Led by Dr. Surbhi Pande (BDS, M. Laser, 23+ years exp). Specializing in painless root canal, laser dentistry, dental implants, smile designing, orthodontics, and invisible braces.">
-  <meta name="keywords" content="best dentist in Shanti Nagar Nagpur, laser dentist Nagpur, painless root canal Gandhibagh Nagpur, dental implants Shanti Nagar, invisible braces Nagpur, Invisalign clinic Nagpur, smile designing Nagpur, dentofacial orthodontics Nagpur, Dr Surbhi Pande dentist Nagpur, Jain Dentofacial Hub Nagpur">
-  <meta name="author" content="Dr. Surbhi Pande">
+  <title>Premium Dental Care Portals — Nagpur</title>
+  <meta name="description" content="Select a premium dental clinic portal in Nagpur: Teeth N Braces Dental Clinic (Dr. Amit &amp; Dr. Monica Giri) or Jain Dentofacial Hub (Dr. Surbhi Pande).">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦷</text></svg>">
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏥</text></svg>">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Outfit & Plus Jakarta Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #1e1b4b;
+      --secondary: #4f46e5;
+      --accent-coral: #ff5b7f;
+      --accent-teal: #3a8891;
+      --bg-gradient: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 50%, #f4fafb 100%);
+      --text-dark: #0f172a;
+      --text-muted: #475569;
+      --white: #ffffff;
+      
+      --border-radius: 20px;
+      --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      --shadow: 0 10px 40px rgba(79, 70, 229, 0.06);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-x: hidden;
+    }
+    
+    header {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(79, 70, 229, 0.07);
+      color: var(--secondary);
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+    
+    header h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    
+    header p {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 0 20px 60px;
+    }
+    
+    .portal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .portal-card {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(79, 70, 229, 0.05);
+      padding: 45px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .portal-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      transition: var(--transition);
+    }
+    
+    .portal-card.teeth::before {
+      background: linear-gradient(90deg, var(--secondary), var(--accent-coral));
+    }
+    
+    .portal-card.jain::before {
+      background: linear-gradient(90deg, #0b4f54, var(--accent-teal));
+    }
+    
+    .portal-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(79, 70, 229, 0.12);
+    }
+    
+    .card-header {
+      margin-bottom: 25px;
+    }
+    
+    .clinic-badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 15px;
+    }
+    
+    .teeth .clinic-badge {
+      background: #fff5f5;
+      color: var(--accent-coral);
+    }
+    
+    .jain .clinic-badge {
+      background: #eff7f8;
+      color: var(--accent-teal);
+    }
+    
+    .portal-card h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    
+    .doctors {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .rating-box {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #b58000;
+    }
+    
+    .rating-box i {
+      color: #ffb800;
+    }
+    
+    .rating-box span {
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.85rem;
+    }
+    
+    .card-body {
+      margin-bottom: 35px;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    
+    .card-footer-action {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--secondary);
+      border-top: 1px solid rgba(0,0,0,0.05);
+      padding-top: 25px;
+      transition: var(--transition);
+    }
+    
+    .jain .card-footer-action {
+      color: #0b4f54;
+    }
+    
+    .btn-circle {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      background: #f5f3ff;
+      color: var(--secondary);
+    }
+    
+    .jain .btn-circle {
+      background: #eff7f8;
+      color: #0b4f54;
+    }
+    
+    .portal-card:hover .btn-circle {
+      transform: translateX(5px);
+    }
+    
+    .teeth:hover .btn-circle {
+      background: var(--secondary);
+      color: var(--white);
+    }
+    
+    .jain:hover .btn-circle {
+      background: #0b4f54;
+      color: var(--white);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(0,0,0,0.03);
+    }
+    
+    /* Responsive styling */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .portal-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        max-width: 500px;
+      }
+      .portal-card {
+        padding: 35px 30px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ==========================================================================
-       HEADER & NAVIGATION
-       ========================================================================== -->
-  <header class="header" id="mainHeader">
-    <div class="container nav-container">
-      <a href="#home" class="logo-link" id="logoLink">
-        <div class="logo-icon">J</div>
-        <div class="logo-text">
-          <h1>Jain Dentofacial Hub</h1>
-          <span>DR. SURBHI PANDE</span>
-        </div>
-      </a>
-      
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#home" class="nav-link active" id="navHome">Home</a></li>
-          <li><a href="#about" class="nav-link" id="navAbout">Dr. Surbhi</a></li>
-          <li><a href="#services" class="nav-link" id="navServices">Services</a></li>
-          <li><a href="#planner" class="nav-link" id="navPlanner">Cost Planner</a></li>
-          <li><a href="#reviews" class="nav-link" id="navReviews">Reviews</a></li>
-          <li><a href="#faq" class="nav-link" id="navFaq">FAQs</a></li>
-          <li><a href="#contact" class="nav-link" id="navContact">Contact</a></li>
-        </ul>
-      </nav>
-      
-      <button class="hamburger" id="hamburgerMenu" aria-label="Toggle Menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+  <header>
+    <div class="logo-badge">
+      <i class="fa-solid fa-tooth"></i> Dental Excellence Portal
     </div>
+    <h1>Premium Dental Care</h1>
+    <p>Please select a clinic to view services, estimate treatment costs, and request appointment consultations online.</p>
   </header>
 
   <main>
-    <!-- ==========================================================================
-         HERO SECTION
-         ========================================================================== -->
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="rating-badge" id="heroRatingBadge">
-            <span class="stars"><i class="fa-solid fa-star"></i> 4.8★ Rating</span>
-            <span class="divider">|</span>
-            <span>150+ Verified Reviews</span>
-          </div>
-          <h2>Painless, Laser &amp;<br><span>Beautiful Smile Design</span></h2>
-          <p>Led by Dr. Surbhi Pande — BDS, M. Laser, with 23+ years of clinical excellence. Experience gentle, advanced laser dentistry, precise orthodontics, and comfortable treatments tailored for your life.</p>
-          <div class="hero-actions">
-            <button class="btn btn-accent" id="heroBookBtn" onclick="openBookingModal()">Book Appointment <i class="fa-solid fa-calendar-check"></i></button>
-            <a href="tel:09552580290" class="btn btn-secondary" id="heroCallBtn">Call: 095525 80290 <i class="fa-solid fa-phone"></i></a>
-          </div>
-        </div>
-        
-        <div class="hero-card" id="heroQuickInfoCard">
-          <h3><span>⚡</span> Quick Clinic Info</h3>
-          <ul class="quick-info-list">
-            <li class="quick-info-item">
-              <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-              <div>
-                <h4>Location</h4>
-                <p>Shanti Nagar, Nagpur</p>
-              </div>
-            </li>
-            <li class="quick-info-item">
-              <div class="icon"><i class="fa-solid fa-clock"></i></div>
-              <div>
-                <h4>Hours</h4>
-                <p>10:00 AM – 8:00 PM</p>
-              </div>
-            </li>
-            <li class="quick-info-item">
-              <div class="icon"><i class="fa-solid fa-check-double"></i></div>
-              <div>
-                <h4>Treatments</h4>
-                <p>Laser, RCT, Braces &amp; Implants</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         STATS BAR
-         ========================================================================== -->
-    <section class="container" style="position: relative;" aria-label="Clinic statistics">
-      <div class="stats-bar" id="statsBar">
-        <div class="stats-grid">
-          <div class="stat-item">
-            <h3 id="statYears">23+</h3>
-            <p>Years Experience</p>
-          </div>
-          <div class="stat-item">
-            <h3 id="statReviews">150+</h3>
-            <p>Verified Reviews</p>
-          </div>
-          <div class="stat-item">
-            <h3 id="statSuccess">99%</h3>
-            <p>Painless RCT Rate</p>
-          </div>
-          <div class="stat-item">
-            <h3 id="statDoctor">IDA</h3>
-            <p>Active Member</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         DOCTOR BIO SECTION
-         ========================================================================== -->
-    <section class="section doctor-section" id="about">
-      <div class="container doctor-grid">
-        <div class="doctor-img-wrapper" id="doctorImgWrapper">
-          <div class="doctor-img-frame">
-            <img src="assets/dr_surbhi_pande.png" alt="Dr. Surbhi Pande — Best Dentist and Orthodontist in Nagpur" width="500" height="500">
-          </div>
-        </div>
-        
-        <div class="doctor-content" id="doctorContent">
-          <span class="badge" id="doctorBadge">Meet Your Dentist</span>
-          <span class="tagline">Warm, Patient-First Consultations</span>
-          <h3>Dr. Surbhi Pande</h3>
-          <p class="doctor-qualifications"><span id="qualBds">BDS</span> <span id="qualMLaser">M. Laser (Laser Specialist)</span> <span id="qualIda">Indian Dental Association Member</span></p>
-          
-          <div class="doctor-bio">
-            <p style="margin-bottom: 15px;">Dr. Surbhi Pande believes in a gentle, informative, and patient-first approach. She takes the time to display your dental X-rays, explain each diagnostic detail, and guide you through every treatment choice. Under her supervision, your dental anxiety disappears, making even root canals feel completely relaxed and painless.</p>
-            <p>With more than 23 years of practicing in Nagpur, Dr. Pande specializes in state-of-the-art Laser Dentistry, Cosmetic Smile Design, Dental Implants, and Orthodontic Aligners.</p>
-          </div>
-          
-          <ul class="doctor-points" id="doctorPointsList">
-            <li><i class="fa-solid fa-circle-check"></i> 23+ Years of Expertise</li>
-            <li><i class="fa-solid fa-circle-check"></i> Advanced Laser Equipments</li>
-            <li><i class="fa-solid fa-circle-check"></i> Painless Laser &amp; RCT Tech</li>
-            <li><i class="fa-solid fa-circle-check"></i> Affordable &amp; Fair Pricing</li>
-          </ul>
-          
-          <div class="doctor-badges" id="inclusivityBadges">
-            <div class="doctor-badge" id="badgeWomen"><i class="fa-solid fa-venus"></i> Women-Owned Practice</div>
-            <div class="doctor-badge" id="badgeLgbtq"><i class="fa-solid fa-rainbow"></i> LGBTQ+ Friendly</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SERVICES SECTION
-         ========================================================================== -->
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section-header">
-          <span class="badge">Comprehensive Care</span>
-          <h2>Our Core Dental Specialities</h2>
-          <p>Delivering state-of-the-art dental care with modern methodologies, comfortable patient management, and transparent pricing models.</p>
-        </div>
-        
-        <div class="services-grid" id="servicesGrid">
-          <!-- Service Card 1 -->
-          <article class="service-card" id="serviceRct">
-            <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
-            <h3>Painless Root Canal (RCT)</h3>
-            <p>Stress-free, gentle endodontic care using advanced rotary files and apex locators. Quickly resolves tooth infections and pain.</p>
-            <a href="#contact" class="service-link">Consult Now <i class="fa-solid fa-arrow-right"></i></a>
-          </article>
-          
-          <!-- Service Card 2 -->
-          <article class="service-card" id="serviceLaser">
-            <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-            <h3>Laser Dentistry</h3>
-            <p>Minimally invasive therapy for gums, cavities, and surgery. Leads to zero bleeding, faster tissue healing, and painless treatments.</p>
-            <a href="#contact" class="service-link">Consult Now <i class="fa-solid fa-arrow-right"></i></a>
-          </article>
-          
-          <!-- Service Card 3 -->
-          <article class="service-card" id="serviceImplants">
-            <div class="service-icon"><i class="fa-solid fa-circle-plus"></i></div>
-            <h3>Dental Implants</h3>
-            <p>Permanent, high-durability, and natural-looking titanium tooth restorations to restore your natural chewing and confident smile.</p>
-            <a href="#contact" class="service-link">Consult Now <i class="fa-solid fa-arrow-right"></i></a>
-          </article>
-          
-          <!-- Service Card 4 -->
-          <article class="service-card" id="serviceBraces">
-            <div class="service-icon"><i class="fa-solid fa-grip-lines"></i></div>
-            <h3>Invisible Braces &amp; Aligners</h3>
-            <p>Get straight teeth at any age. Personalized clear aligners (Invisalign) designed around your lifestyle, aesthetics, and comfort.</p>
-            <a href="#contact" class="service-link">Consult Now <i class="fa-solid fa-arrow-right"></i></a>
-          </article>
-          
-          <!-- Service Card 5 -->
-          <article class="service-card" id="serviceSmile">
-            <div class="service-icon"><i class="fa-solid fa-face-smile"></i></div>
-            <h3>Smile Designing</h3>
-            <p>Cosmetic teeth shaping, dental veneers, laminates, and teeth bleaching. Achieve the bright, symmetric smile you've always desired.</p>
-            <a href="#contact" class="service-link">Consult Now <i class="fa-solid fa-arrow-right"></i></a>
-          </article>
-          
-          <!-- Service Card 6 -->
-          <article class="service-card" id="serviceKids">
-            <div class="service-icon"><i class="fa-solid fa-child"></i></div>
-            <h3>Paediatric Dentistry</h3>
-            <p>Extremely gentle, warm, and child-friendly dental care. Creating healthy oral hygiene habits and positive experiences for kids.</p>
-            <a href="#contact" class="service-link">Consult Now <i class="fa-solid fa-arrow-right"></i></a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         INTERACTIVE COST CALCULATOR
-         ========================================================================== -->
-    <section class="section planner-section" id="planner">
-      <div class="container">
-        <div class="section-header">
-          <span class="badge">Interactive Tool</span>
-          <h2>Treatment Planner &amp; Estimator</h2>
-          <p>Select a treatment concern below to explore details, expected time frames, and budget estimates instantly.</p>
-        </div>
-        
-        <div class="planner-container" id="plannerContainer">
-          <div class="planner-header">
-            <h3>Dental Treatment Planner</h3>
-            <p>Get instant transparency on treatment steps and cost ranges</p>
-          </div>
-          
-          <div class="planner-tabs" role="tablist">
-            <button class="planner-tab active" id="tabRct" role="tab" aria-selected="true" onclick="switchPlannerTab('rct')">Root Canal (RCT)</button>
-            <button class="planner-tab" id="tabAligners" role="tab" aria-selected="false" onclick="switchPlannerTab('aligners')">Invisible Braces</button>
-            <button class="planner-tab" id="tabImplants" role="tab" aria-selected="false" onclick="switchPlannerTab('implants')">Dental Implants</button>
-            <button class="planner-tab" id="tabCleaning" role="tab" aria-selected="false" onclick="switchPlannerTab('cleaning')">Teeth Cleaning</button>
-          </div>
-          
-          <div class="planner-body">
-            <!-- RCT Content -->
-            <div class="planner-step active" id="plannerStep-rct">
-              <div class="planner-options-grid">
-                <div class="planner-option-card selected" onclick="selectPlannerOption('rct', 'single', this)">
-                  <i class="fa-solid fa-bolt-lightning"></i>
-                  <h4>Single Visit Laser RCT</h4>
-                  <p>Fast, high-tech, laser sterilized</p>
-                </div>
-                <div class="planner-option-card" onclick="selectPlannerOption('rct', 'multi', this)">
-                  <i class="fa-solid fa-hourglass-half"></i>
-                  <h4>Standard Multi-Visit RCT</h4>
-                  <p>Traditional, comfortable care</p>
-                </div>
-              </div>
-              
-              <div class="planner-result-card">
-                <h4 id="rctResultTitle">Single Visit Laser RCT Details</h4>
-                <div class="result-detail-row">
-                  <span class="result-label">Duration:</span>
-                  <span class="result-value" id="rctResultTime">1 session (approx. 45 mins)</span>
-                </div>
-                <div class="result-detail-row">
-                  <span class="result-label">Laser Sterilization Included:</span>
-                  <span class="result-value" id="rctResultLaser">Yes</span>
-                </div>
-                <div class="result-detail-row">
-                  <span class="result-label">Estimated Cost Range:</span>
-                  <span class="result-value cost" id="rctResultCost">₹3,500 - ₹5,500</span>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Aligners Content -->
-            <div class="planner-step" id="plannerStep-aligners">
-              <div class="planner-options-grid">
-                <div class="planner-option-card selected" onclick="selectPlannerOption('aligners', 'invisible', this)">
-                  <i class="fa-solid fa-mask"></i>
-                  <h4>Invisible Clear Aligners</h4>
-                  <p>Invisalign - transparent &amp; removable</p>
-                </div>
-                <div class="planner-option-card" onclick="selectPlannerOption('aligners', 'ceramic', this)">
-                  <i class="fa-solid fa-border-all"></i>
-                  <h4>Ceramic &amp; Metallic Braces</h4>
-                  <p>Conventional tooth alignment</p>
-                </div>
-              </div>
-              
-              <div class="planner-result-card">
-                <h4 id="alignerResultTitle">Invisible Clear Aligners Details</h4>
-                <div class="result-detail-row">
-                  <span class="result-label">Treatment Duration:</span>
-                  <span class="result-value" id="alignerResultTime">6 to 14 months</span>
-                </div>
-                <div class="result-detail-row">
-                  <span class="result-label">Aesthetic Profile:</span>
-                  <span class="result-value" id="alignerResultAesthetic">100% Invisible, Easy to clean</span>
-                </div>
-                <div class="result-detail-row">
-                  <span class="result-label">Estimated Cost Range:</span>
-                  <span class="result-value cost" id="alignerResultCost">₹45,000 - ₹1,20,000</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Implants Content -->
-            <div class="planner-step" id="plannerStep-implants">
-              <div class="planner-options-grid">
-                <div class="planner-option-card selected" onclick="selectPlannerOption('implants', 'premium', this)">
-                  <i class="fa-solid fa-crown"></i>
-                  <h4>Premium Titanium Implant</h4>
-                  <p>Lifetime warranty, top international brands</p>
-                </div>
-                <div class="planner-option-card" onclick="selectPlannerOption('implants', 'standard', this)">
-                  <i class="fa-solid fa-shield"></i>
-                  <h4>Standard Dental Implant</h4>
-                  <p>Reliable, stable tooth replacement</p>
-                </div>
-              </div>
-              
-              <div class="planner-result-card">
-                <h4 id="implantsResultTitle">Premium Titanium Implant Details</h4>
-                <div class="result-detail-row">
-                  <span class="result-label">Healing Time:</span>
-                  <span class="result-value" id="implantsResultTime">2 to 3 months (Osteointegration)</span>
-                </div>
-                <div class="result-detail-row">
-                  <span class="result-label">Lifespan:</span>
-                  <span class="result-value" id="implantsResultLifespan">Lifetime durability</span>
-                </div>
-                <div class="result-detail-row">
-                  <span class="result-label">Estimated Cost Range:</span>
-                  <span class="result-value cost" id="implantsResultCost">₹25,000 - ₹40,000</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Cleaning Content -->
-            <div class="planner-step" id="plannerStep-cleaning">
-              <div class="planner-options-grid">
-                <div class="planner-option-card selected" onclick="selectPlannerOption('cleaning', 'ultrasonic', this)">
-                  <i class="fa-solid fa-water"></i>
-                  <h4>Scaling &amp; Ultrasonic Cleaning</h4>
-                  <p>Removes hard plaque, tartar &amp; stains</p>
-                </div>
-                <div class="planner-option-card" onclick="selectPlannerOption('cleaning', 'polishing', this)">
-                  <i class="fa-solid fa-sparkles"></i>
-                  <h4>Scaling + Polish &amp; Stain Removal</h4>
-                  <p>Extra glossy finish &amp; deep stain clean</p>
-                </div>
-              </div>
-              
-              <div class="planner-result-card">
-                <h4 id="cleaningResultTitle">Scaling &amp; Ultrasonic Cleaning Details</h4>
-                <div class="result-detail-row">
-                  <span class="result-label">Duration:</span>
-                  <span class="result-value" id="cleaningResultTime">1 session (30 mins)</span>
-                </div>
-                <div class="result-detail-row">
-                  <span class="result-label">Recommended Frequency:</span>
-                  <span class="result-value" id="cleaningResultFreq">Once every 6 months</span>
-                </div>
-                <div class="result-detail-row">
-                  <span class="result-label">Estimated Cost Range:</span>
-                  <span class="result-value cost" id="cleaningResultCost">₹1,000 - ₹2,000</span>
-                </div>
-              </div>
+    <div class="portal-grid">
+      <!-- Portal 1: Teeth N Braces -->
+      <a href="TeethNBraces/index.html" class="portal-card teeth">
+        <div>
+          <div class="card-header">
+            <span class="clinic-badge">Orthodontics &amp; Pediatrics</span>
+            <h2>Teeth N Braces</h2>
+            <div class="doctors">Dr. Amit Giri &amp; Dr. Monica Giri</div>
+            <div class="rating-box">
+              <i class="fa-solid fa-star"></i> 5.0
+              <span>(200+ Verified Patient Reviews)</span>
             </div>
           </div>
-          
-          <div class="planner-footer">
-            <span class="price-estimate">*Cost estimates represent average ranges. Final quote depends on individual clinical conditions.</span>
-            <button class="btn btn-primary btn-sm" id="plannerBookBtn" onclick="openBookingModal('planner')">Book Treatment Now</button>
+          <div class="card-body">
+            Specializing in brackets treatment (metallic, ceramic, self-ligating), painless root canal treatments, pediatric dentistry, and dental crowns. Conveniently open till 9 PM.
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         ORTHODONTICS FOCUS (INSTAGRAM HIGHLIGHT)
-         ========================================================================== -->
-    <section class="section braces-spotlight">
-      <div class="container braces-grid">
-        <div class="braces-content" id="bracesContent">
-          <span class="badge" style="background: rgba(212,175,55,0.15); color: var(--accent);">Teeth Realignment</span>
-          <h2>Straight Teeth. Confident Smile. Any Age.</h2>
-          <p>Whether you're a teenager or an adult, Dr. Surbhi Pande offers personalized orthodontic plans — from traditional brackets to crystal-clear, removable aligners.</p>
-          <ul class="braces-bullets" id="bracesBullets">
-            <li><i class="fa-solid fa-circle-check"></i> <strong>Comfortable &amp; Removable:</strong> Remove aligners easily to eat, brush, and floss.</li>
-            <li><i class="fa-solid fa-circle-check"></i> <strong>Sleek &amp; Invisible:</strong> Nobody can tell you're undergoing orthodontic treatment.</li>
-            <li><i class="fa-solid fa-circle-check"></i> <strong>Accurate 3D Planning:</strong> Map out your teeth path with precise, comfortable digital imaging.</li>
-            <li><i class="fa-solid fa-circle-check"></i> <strong>Honest Pricing:</strong> Flexible installment plans designed around your budget.</li>
-          </ul>
-          <button class="btn btn-accent" id="bracesConsultBtn" onclick="openBookingModal()">Get Aligners Consultation</button>
+        <div class="card-footer-action">
+          <span>Enter Website</span>
+          <div class="btn-circle"><i class="fa-solid fa-arrow-right"></i></div>
         </div>
-        
-        <!-- Instagram Post styled card -->
-        <article class="instagram-post-mockup" id="instaCard">
-          <div class="insta-header">
-            <div class="insta-avatar">JD</div>
-            <div class="insta-user-info">
-              <span class="insta-username">jain.dentofacial.hub</span>
-              <span class="insta-location">Shanti Nagar, Nagpur</span>
+      </a>
+      
+      <!-- Portal 2: Jain Dentofacial Hub -->
+      <a href="JainDentofacial/index.html" class="portal-card jain">
+        <div>
+          <div class="card-header">
+            <span class="clinic-badge">Laser &amp; Orthodontics</span>
+            <h2>Jain Dentofacial Hub</h2>
+            <div class="doctors">Dr. Surbhi Pande</div>
+            <div class="rating-box">
+              <i class="fa-solid fa-star"></i> 4.8
+              <span>(150+ Verified Patient Reviews)</span>
             </div>
           </div>
-          <div class="insta-img-container">
-            <img src="assets/orthodontics_aligners.png" alt="Clear orthodontic aligner placement" width="400" height="400">
-          </div>
-          <div class="insta-actions">
-            <i class="fa-solid fa-heart" id="instaHeartBtn" onclick="toggleInstaHeart()"></i>
-            <i class="fa-regular fa-comment"></i>
-            <i class="fa-regular fa-paper-plane"></i>
-          </div>
-          <div class="insta-likes"><span id="instaLikesCount">512</span> likes</div>
-          <div class="insta-caption">
-            <span class="username">jain.dentofacial.hub</span>✨ Straight teeth. Confident smile. Any age. Dr. Surbhi Pande offers customized aligner treatment designed around your goals! 🦷
-            <br>
-            <a href="#" class="hashtag">#OrthodonticsNagpur</a> <a href="#" class="hashtag">#InvisibleBraces</a> <a href="#" class="hashtag">#JainDentofacialHub</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         PATIENT REVIEWS & FEEDBACK
-         ========================================================================== -->
-    <section class="section reviews-section" id="reviews">
-      <div class="container">
-        <div class="section-header">
-          <span class="badge">Patient Love</span>
-          <h2>What Our Patients Say</h2>
-          <p>Honest feedback from individuals and families who trusted us with their oral health and smile transformations.</p>
-        </div>
-        
-        <div class="reviews-summary-grid">
-          <!-- Overview Card -->
-          <div class="rating-overview-card" id="ratingOverview">
-            <div class="rating-score" id="avgRatingScore">4.8</div>
-            <div class="rating-stars" id="avgRatingStars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star-half-stroke"></i>
-            </div>
-            <div class="rating-count"><span id="verifiedReviewsCount">150</span> Verified Patient Reviews</div>
-            
-            <button class="btn btn-secondary write-review-toggle" id="writeReviewBtn" onclick="toggleReviewForm()">Write a Review</button>
-            
-            <!-- Submit Review Form (Dynamically saved to local storage) -->
-            <form class="review-form-container" id="reviewForm" onsubmit="handleReviewSubmit(event)">
-              <div class="review-form-group">
-                <label>Select Rating</label>
-                <div class="review-rating-select" id="ratingStarsSelect">
-                  <i class="fa-solid fa-star" data-value="1" onclick="setSelectRating(1)"></i>
-                  <i class="fa-solid fa-star" data-value="2" onclick="setSelectRating(2)"></i>
-                  <i class="fa-solid fa-star" data-value="3" onclick="setSelectRating(3)"></i>
-                  <i class="fa-solid fa-star" data-value="4" onclick="setSelectRating(4)"></i>
-                  <i class="fa-solid fa-star" data-value="5" onclick="setSelectRating(5)"></i>
-                </div>
-              </div>
-              <div class="review-form-group">
-                <label for="reviewName">Your Name</label>
-                <input type="text" id="reviewName" class="review-input" required placeholder="e.g., Suresh Kumar">
-              </div>
-              <div class="review-form-group">
-                <label for="reviewText">Your Experience</label>
-                <textarea id="reviewText" rows="3" class="review-input" required placeholder="Describe your consultation or treatment..."></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 10px;" id="submitReviewBtn">Submit Review</button>
-            </form>
-          </div>
-          
-          <!-- Reviews list -->
-          <div class="reviews-feed" id="reviewsFeed">
-            <!-- Review items will load here dynamically -->
+          <div class="card-body">
+            Specializing in state-of-the-art laser dentistry, orthodontic aligners, painless laser root canal treatments (RCT), and permanent dental implants. Built on 23+ years of clinical excellence.
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         FAQ ACCORDION SECTION
-         ========================================================================== -->
-    <section class="section faq-section" id="faq">
-      <div class="container">
-        <div class="section-header">
-          <span class="badge">Got Questions?</span>
-          <h2>Frequently Asked Questions</h2>
-          <p>Transparent information about treatments, comfort, and clinic policies to help you feel confident before visiting.</p>
+        <div class="card-footer-action">
+          <span>Enter Website</span>
+          <div class="btn-circle"><i class="fa-solid fa-arrow-right"></i></div>
         </div>
-        
-        <div class="faq-container" id="faqContainer">
-          <!-- FAQ 1 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-              Is root canal treatment (RCT) really painless?
-              <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                Yes! With modern dental anesthetics, computerized rotary machines, and laser disinfection protocols, the treatment is fully numbed and comfortable. Most patients feel no pain during the procedure and experience quick relief from their initial toothache.
-              </div>
-            </div>
-          </div>
-          
-          <!-- FAQ 2 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-              What are the benefits of Laser Dentistry?
-              <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                Laser dentistry uses a concentrated beam of light energy. It sterilizes treatment spots, stops bleeding instantly, avoids the need for stitches in minor gum procedures, and results in less swelling and faster recovery times than traditional drills and scalpels.
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ 3 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-              Am I too old for braces or invisible aligners?
-              <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                Not at all! Teeth alignment can be done at almost any age, provided your teeth and supporting jaw bone structure are healthy. Invisible aligners are highly popular among adults because they are discrete, clean, and do not affect professional styling.
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ 4 -->
-          <div class="faq-item">
-            <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-              Are your prices transparent? Do you offer installment plans?
-              <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
-            </button>
-            <div class="faq-answer">
-              <div class="faq-answer-content">
-                Absolutely. We believe in complete financial transparency. We show you all treatment rates upfront. For long-term orthodontic treatments and implants, we provide flexible installment payment options so that premium dental care remains accessible.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         CONTACT & LOCATION SECTION
-         ========================================================================== -->
-    <section class="section" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-info-card" id="contactInfoCard">
-          <h3>Contact Details</h3>
-          <ul class="contact-links-list">
-            <li class="contact-link-item">
-              <div class="icon"><i class="fa-solid fa-phone"></i></div>
-              <div>
-                <h4>Call Center</h4>
-                <p><a href="tel:09552580290">095525 80290</a></p>
-              </div>
-            </li>
-            
-            <li class="contact-link-item">
-              <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
-              <div>
-                <h4>Clinic Location</h4>
-                <p>Shantinagar Ghat Chowk, Above Kulguru Medical,<br>Shanti Nagar, Nagpur — 440002</p>
-              </div>
-            </li>
-
-            <li class="contact-link-item">
-              <div class="icon"><i class="fa-solid fa-clock"></i></div>
-              <div>
-                <h4>Working Hours</h4>
-                <p>Monday – Saturday: 10:00 AM – 8:00 PM<br>Sunday: By Appointment Only</p>
-              </div>
-            </li>
-          </ul>
-
-          <div class="social-links" id="contactSocial">
-            <a href="https://instagram.com/jain.dentofacial.hub" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram Profile"><i class="fa-brands fa-instagram"></i></a>
-            <a href="tel:09552580290" class="social-btn" aria-label="Call Clinic"><i class="fa-solid fa-phone"></i></a>
-          </div>
-
-          <!-- Maps Integration Container -->
-          <div class="map-container" id="mapContainer">
-            <a href="https://maps.google.com/?q=Shantinagar+Ghat+Chowk,+Above+Kulguru+Medical,+Shanti+Nagar,+Nagpur" target="_blank" rel="noopener" class="map-link-overlay" aria-label="Open clinic location in Google Maps"></a>
-            <div class="map-mockup">
-              <div class="map-pin">
-                <i class="fa-solid fa-location-crosshairs"></i>
-                Jain Dentofacial Hub (Google Maps)
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Appointment Form Card -->
-        <div class="contact-form" id="contactFormCard">
-          <h3>Request Appointment</h3>
-          <form id="mainBookingForm" onsubmit="handleDirectBooking(event)">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="formName">Full Name</label>
-                <input type="text" id="formName" class="form-input" required placeholder="e.g., Rajesh Sharma">
-              </div>
-              <div class="form-group">
-                <label for="formPhone">Phone Number</label>
-                <input type="tel" id="formPhone" class="form-input" required placeholder="e.g., 098765 43210">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="formService">Requested Service</label>
-                <select id="formService" class="form-input" style="height:48px;" required>
-                  <option value="" disabled selected>Select dental treatment</option>
-                  <option value="Laser Root Canal Treatment">Painless Root Canal (RCT)</option>
-                  <option value="Laser Dentistry">Laser Dentistry Treatment</option>
-                  <option value="Dental Implants">Dental Implants Restore</option>
-                  <option value="Invisible Braces">Invisible Braces &amp; Aligners</option>
-                  <option value="Smile Designing">Cosmetic Smile Designing</option>
-                  <option value="Teeth Cleaning">Teeth Cleaning &amp; Scaling</option>
-                  <option value="General Consultation">General Checkup / Consultation</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="formDate">Appointment Date</label>
-                <input type="date" id="formDate" class="form-input" required>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="formNotes">Additional Notes (Optional)</label>
-              <textarea id="formNotes" rows="3" class="form-input" placeholder="Any specific tooth problems, pain duration, or dental anxiety notes..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%;" id="formSubmitBtn">Submit Request <i class="fa-solid fa-paper-plane"></i></button>
-          </form>
-        </div>
-      </div>
-    </section>
+      </a>
+    </div>
   </main>
 
-  <!-- ==========================================================================
-       FOOTER
-       ========================================================================== -->
-  <footer class="footer" id="mainFooter">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <h4>Jain Dentofacial Hub</h4>
-        <p>Expert orthodontic care, advanced laser dentistry, and clinical perfection led by Dr. Surbhi Pande. Helping families in Nagpur smile with complete confidence.</p>
-        <span class="badge" style="background: rgba(255,255,255,0.1); color: var(--accent);">4.8★ rated · 150+ reviews</span>
-      </div>
-      
-      <div class="footer-links">
-        <h5>Quick Links</h5>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Dr. Surbhi</a></li>
-          <li><a href="#services">Our Specialities</a></li>
-          <li><a href="#planner">Cost Planner</a></li>
-          <li><a href="#reviews">Patient Reviews</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h5>Treatments</h5>
-        <ul>
-          <li><a href="#services">Painless RCT</a></li>
-          <li><a href="#services">Laser Dentistry</a></li>
-          <li><a href="#services">Invisible Aligners</a></li>
-          <li><a href="#services">Dental Implants</a></li>
-          <li><a href="#services">Cosmetic Makeover</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h5>Contacts</h5>
-        <ul style="gap: 15px;">
-          <li><i class="fa-solid fa-phone" style="color: var(--accent); margin-right: 5px;"></i> 095525 80290</li>
-          <li><i class="fa-solid fa-location-dot" style="color: var(--accent); margin-right: 5px;"></i> Above Kulguru Medical, Shanti Nagar, Nagpur</li>
-          <li><i class="fa-solid fa-envelope" style="color: var(--accent); margin-right: 5px;"></i> contact@jaindentofacial.com</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p>&copy; 2026 Jain Dentofacial Hub. All Rights Reserved. Designed for clinic promotion.</p>
-      <div class="footer-bottom-links">
-        <a href="admin.html" target="_blank" style="color: var(--accent); font-weight:600;"><i class="fa-solid fa-lock"></i> Clinic Portal</a>
-      </div>
-    </div>
+  <footer>
+    <p>&copy; 2026 Nagpur Dental Care Portals. All Rights Reserved.</p>
   </footer>
 
-  <!-- ==========================================================================
-       BOOKING MODAL (POP-UP DIALOG)
-       ========================================================================== -->
-  <div class="modal-overlay" id="bookingModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3 id="modalTitle">Book Consultation</h3>
-        <button class="modal-close" onclick="closeBookingModal()"><i class="fa-solid fa-xmark"></i></button>
-      </div>
-      <div class="modal-body">
-        <form id="modalBookingForm" onsubmit="handleModalBooking(event)">
-          <div class="form-group">
-            <label for="modalName">Full Name</label>
-            <input type="text" id="modalName" class="form-input" required placeholder="e.g., Anita Verma">
-          </div>
-          <div class="form-group">
-            <label for="modalPhone">Phone Number</label>
-            <input type="tel" id="modalPhone" class="form-input" required placeholder="e.g., 095525 XXXXX">
-          </div>
-          <div class="form-group">
-            <label for="modalService">Dental Treatment</label>
-            <select id="modalService" class="form-input" style="height:48px;" required>
-              <option value="General Consultation" selected>General Checkup / Consultation</option>
-              <option value="Laser Root Canal Treatment">Painless Root Canal (RCT)</option>
-              <option value="Laser Dentistry">Laser Dentistry Treatment</option>
-              <option value="Dental Implants">Dental Implants Restore</option>
-              <option value="Invisible Braces">Invisible Braces &amp; Aligners</option>
-              <option value="Smile Designing">Cosmetic Smile Designing</option>
-              <option value="Teeth Cleaning">Teeth Cleaning &amp; Scaling</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="modalDate">Preferred Date</label>
-              <input type="date" id="modalDate" class="form-input" required>
-            </div>
-            <div class="form-group">
-              <label for="modalTime">Preferred Time</label>
-              <select id="modalTime" class="form-input" style="height:48px;" required>
-                <option value="Morning (10:00 AM - 1:00 PM)">Morning (10 AM - 1 PM)</option>
-                <option value="Afternoon (1:00 PM - 4:00 PM)">Afternoon (1 PM - 4 PM)</option>
-                <option value="Evening (4:00 PM - 8:00 PM)" selected>Evening (4 PM - 8 PM)</option>
-              </select>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;" id="modalSubmitBtn">Book My Spot <i class="fa-solid fa-check"></i></button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==========================================================================
-       WHATSAPP CHAT WIDGET
-       ========================================================================== -->
-  <div class="whatsapp-widget" id="whatsappWidget">
-    <button class="whatsapp-btn" id="waBtn" onclick="toggleChatBox()" aria-label="Open Chat Window"><i class="fa-brands fa-whatsapp"></i></button>
-    <div class="chat-box" id="waChatBox">
-      <div class="chat-header">
-        <img src="assets/dr_surbhi_pande.png" alt="Dr. Surbhi Pande Avatar" width="35" height="35">
-        <div class="chat-doctor-status">
-          <h4>Dr. Surbhi Pande</h4>
-          <span>Online (Usually replies fast)</span>
-        </div>
-      </div>
-      
-      <div class="chat-body" id="chatBody">
-        <div class="chat-msg">
-          Hello! 😊 I'm Dr. Surbhi Pande. How can I help you with your teeth concern today?
-          <span class="time" id="chatTime">12:30 PM</span>
-        </div>
-      </div>
-      
-      <div class="chat-input-area">
-        <input type="text" id="chatInputField" placeholder="Type dental question..." onkeydown="handleChatSubmit(event)">
-        <button onclick="submitChat()" aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Toast Notification element -->
-  <div class="toast" id="toastNotification">
-    <i class="fa-solid fa-circle-check"></i>
-    <span id="toastMessage">Success Message!</span>
-  </div>
-
-  <!-- Custom JavaScript -->
-  <script src="script.js"></script>
 </body>
 </html>

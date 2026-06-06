@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teeth N Braces Dental Clinic — Dr. Amit Giri &amp; Dr. Monica Giri | 5★ Rated Dentist in Untkhana, Nagpur</title>
+  <meta name="description" content="Nagpur's 5.0★ rated dental clinic — a rare, perfect score across 200+ reviews. Led by Dr. Amit Giri &amp; Dr. Monica Giri. Specialists in braces, painless root canals, dental crowns, kids dentistry, and smile designing in Untkhana, Nagpur.">
+  <meta name="keywords" content="best dentist in Untkhana Nagpur, dental clinic near Medical College Road Nagpur, braces treatment Nagpur, braces clinic near Medical Square Nagpur, painless root canal Untkhana, kids dentist Nagpur, children dentist near Medical College Nagpur, dental crown Nagpur, Dr Monica Giri dentist Nagpur, Dr Amit Giri dentist Nagpur, teeth n braces dental clinic Nagpur, 5 star dentist Nagpur, smile designing Nagpur, dentist open till 9pm Nagpur">
+  <meta name="author" content="Dr. Amit Giri &amp; Dr. Monica Giri">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦷</text></svg>">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="header" id="mainHeader">
+    <div class="container nav-container">
+      <a href="#home" class="logo-link" id="logoLink">
+        <div class="logo-icon">T</div>
+        <div class="logo-text">
+          <h1>Teeth N Braces</h1>
+          <span>DR. AMIT &amp; DR. MONICA GIRI</span>
+        </div>
+      </a>
+      
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link active" id="navHome">Home</a></li>
+          <li><a href="#about" class="nav-link" id="navAbout">Our Doctors</a></li>
+          <li><a href="#services" class="nav-link" id="navServices">Services</a></li>
+          <li><a href="#planner" class="nav-link" id="navPlanner">Cost Planner</a></li>
+          <li><a href="#kids-corner" class="nav-link" id="navKids">Kids Corner</a></li>
+          <li><a href="#reviews" class="nav-link" id="navReviews">Reviews</a></li>
+          <li><a href="#faq" class="nav-link" id="navFaq">FAQs</a></li>
+          <li><a href="#contact" class="nav-link" id="navContact">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <button class="hamburger" id="hamburgerMenu" aria-label="Toggle Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="rating-badge" id="heroRatingBadge">
+            <span class="stars"><i class="fa-solid fa-star"></i> 5.0★ Rating</span>
+            <span class="divider">|</span>
+            <span>200+ Verified Patient Reviews</span>
+          </div>
+          <h2>Modern Orthodontics &amp;<br><span>Complete Family Dental Care</span></h2>
+          <p>Nagpur's rare perfect 5.0★ dental clinic led by the husband-wife duo, Dr. Amit Giri and Dr. Monica Giri. Renowned for soft-spoken, gentle techniques, painless procedures, children's dental care, and state-of-the-art hygiene.</p>
+          <div class="hero-actions">
+            <button class="btn btn-accent" id="heroBookBtn" onclick="openBookingModal()">Book Appointment <i class="fa-solid fa-calendar-check"></i></button>
+            <a href="tel:09022013669" class="btn btn-secondary" style="color: white; border-color: white;" id="heroCallBtn">Call: 090220 13669 <i class="fa-solid fa-phone"></i></a>
+          </div>
+        </div>
+        
+        <div class="hero-card" id="heroQuickInfoCard">
+          <h3><span>⚡</span> Quick Clinic Info</h3>
+          <ul class="quick-info-list">
+            <li class="quick-info-item">
+              <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <h4>Location</h4>
+                <p>Untkhana, Nagpur</p>
+              </div>
+            </li>
+            <li class="quick-info-item">
+              <div class="icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <h4>Hours</h4>
+                <p>Open till 9:00 PM</p>
+              </div>
+            </li>
+            <li class="quick-info-item">
+              <div class="icon"><i class="fa-solid fa-check-double"></i></div>
+              <div>
+                <h4>Specialities</h4>
+                <p>Braces, Painless RCT &amp; Kids Care</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         STATS BAR
+         ========================================================================== -->
+    <section class="container" style="position: relative;" aria-label="Clinic statistics">
+      <div class="stats-bar" id="statsBar">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3 id="statRating">5.0★</h3>
+            <p>Google Rating</p>
+          </div>
+          <div class="stat-item">
+            <h3 id="statReviews">200+</h3>
+            <p>Happy Patients</p>
+          </div>
+          <div class="stat-item">
+            <h3 id="statDuo">Duo</h3>
+            <p>Expert Team</p>
+          </div>
+          <div class="stat-item">
+            <h3 id="statHours">9 PM</h3>
+            <p>Evening Appts</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         DOCTORS BIO SECTION
+         ========================================================================== -->
+    <section class="section doctor-section" id="about">
+      <div class="container doctors-grid">
+        <div class="doctor-img-wrapper" id="doctorImgWrapper">
+          <div class="doctor-img-frame">
+            <img src="assets/dentists_team.png" alt="Dr. Amit Giri and Dr. Monica Giri — Dentist Team at Teeth N Braces Nagpur" width="500" height="500">
+          </div>
+        </div>
+        
+        <div class="doctor-content" id="doctorContent">
+          <span class="badge">Meet the Doctors</span>
+          <span class="tagline">Expert Husband-Wife Dental Team</span>
+          <h3>Dr. Amit Giri &amp; Dr. Monica Giri</h3>
+          <p class="doctors-headline">Providing highly specialized, comfortable, and comprehensive dentistry under one roof in Nagpur.</p>
+          
+          <div class="doctor-profile-box amit" id="drAmitBox">
+            <div class="doctor-name-title">
+              <h4>Dr. Amit Giri</h4>
+              <span>BDS, MDS Orthodontist</span>
+            </div>
+            <p>Specializes in advanced orthodontics, braces treatment (metal, ceramic, self-ligating, invisible), and complex smile designing. He is known for clear treatment explanations and custom dental care planning.</p>
+          </div>
+
+          <div class="doctor-profile-box monica" id="drMonicaBox">
+            <div class="doctor-name-title">
+              <h4>Dr. Monica Giri</h4>
+              <span>BDS Pediatric Specialist</span>
+            </div>
+            <p>Renowned for her soft-spoken, smiling, and patient-first approach. She makes children feel completely at ease during kids dentistry treatments, transforming dental dread into comfortable and positive experiences.</p>
+          </div>
+          
+          <ul class="doctor-points" id="doctorPointsList">
+            <li><i class="fa-solid fa-circle-check"></i> Transparent Treatment Plans</li>
+            <li><i class="fa-solid fa-circle-check"></i> Gentle, Painless RCT Care</li>
+            <li><i class="fa-solid fa-circle-check"></i> Child-Friendly Environment</li>
+            <li><i class="fa-solid fa-circle-check"></i> Strict Hygiene Protocols</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SERVICES SECTION
+         ========================================================================== -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Comprehensive Care</span>
+          <h2>Our Core Dental Specialities</h2>
+          <p>Delivering high-tech and comfortable dental care with transparent plans and high-quality durable materials.</p>
+        </div>
+        
+        <div class="services-grid" id="servicesGrid">
+          <!-- Service Card 1 -->
+          <article class="service-card" id="serviceBraces">
+            <div class="service-icon"><i class="fa-solid fa-grip-lines"></i></div>
+            <h3>Braces Treatment</h3>
+            <p>Get straight teeth at any age. We offer metallic, ceramic, self-ligating braces and invisible clear aligner consultations tailored to your profile.</p>
+            <a href="#contact" class="service-link">Consult Now <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          
+          <!-- Service Card 2 -->
+          <article class="service-card" id="serviceRct">
+            <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
+            <h3>Painless Root Canal (RCT)</h3>
+            <p>Comfortable endodontic care using computer-assisted rotary tools. Dr. Monica Giri's soft-spoken method takes away all root canal anxieties.</p>
+            <a href="#contact" class="service-link">Consult Now <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          
+          <!-- Service Card 3 -->
+          <article class="service-card" id="serviceCrowns">
+            <div class="service-icon"><i class="fa-solid fa-crown"></i></div>
+            <h3>Dental Crowns &amp; Bridges</h3>
+            <p>Durable, high-quality ceramic and metal-free tooth crowns. Perfect color-matching and fitment to fully restore chewing and bite strength.</p>
+            <a href="#contact" class="service-link">Consult Now <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          
+          <!-- Service Card 4 -->
+          <article class="service-card" id="serviceKids">
+            <div class="service-icon"><i class="fa-solid fa-child"></i></div>
+            <h3>Kids Dentistry</h3>
+            <p>Energetic, smiling, and pediatric care for children. Emphasizes clean fillings, cavity prevention, and fun clinic visits that kids look forward to.</p>
+            <a href="#kids-corner" class="service-link">View Kids Corner <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          
+          <!-- Service Card 5 -->
+          <article class="service-card" id="serviceSmile">
+            <div class="service-icon"><i class="fa-solid fa-face-smile"></i></div>
+            <h3>Smile Designing</h3>
+            <p>Personalized cosmetic enhancements including dental veneers, bleaching, gum reshaping, and tooth alignment for a bright, confident smile.</p>
+            <a href="#contact" class="service-link">Consult Now <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          
+          <!-- Service Card 6 -->
+          <article class="service-card" id="serviceFillings">
+            <div class="service-icon"><i class="fa-solid fa-fill-drip"></i></div>
+            <h3>Deep Fillings &amp; Restorations</h3>
+            <p>Careful tooth-colored composite restorations to repair decay, prevent fracture, and restore tooth structural integrity seamlessly.</p>
+            <a href="#contact" class="service-link">Consult Now <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE TREATMENT ESTIMATOR
+         ========================================================================== -->
+    <section class="section planner-section" id="planner">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Interactive Estimator</span>
+          <h2>Treatment Planner &amp; Cost Estimator</h2>
+          <p>Select your treatment below to review steps, approximate timeframes, and baseline estimates transparently.</p>
+        </div>
+        
+        <div class="planner-container" id="plannerContainer">
+          <div class="planner-header">
+            <h3>Dental Treatment Planner</h3>
+            <p>Get instant transparency on treatment steps and cost ranges</p>
+          </div>
+          
+          <div class="planner-tabs" role="tablist">
+            <button class="planner-tab active" id="tabBraces" role="tab" aria-selected="true" onclick="switchPlannerTab('braces')">Braces &amp; Aligners</button>
+            <button class="planner-tab" id="tabRct" role="tab" aria-selected="false" onclick="switchPlannerTab('rct')">Root Canal (RCT)</button>
+            <button class="planner-tab" id="tabCrowns" role="tab" aria-selected="false" onclick="switchPlannerTab('crowns')">Crowns &amp; Bridges</button>
+            <button class="planner-tab" id="tabKids" role="tab" aria-selected="false" onclick="switchPlannerTab('kids')">Kids Dentistry</button>
+          </div>
+          
+          <div class="planner-body">
+            <!-- Braces Tab Content -->
+            <div class="planner-step active" id="plannerStep-braces">
+              <div class="planner-options-grid">
+                <div class="planner-option-card selected" onclick="selectPlannerOption('braces', 'aligners', this)">
+                  <i class="fa-solid fa-mask"></i>
+                  <h4>Invisible Clear Aligners</h4>
+                  <p>Invisalign - premium &amp; aesthetic</p>
+                </div>
+                <div class="planner-option-card" onclick="selectPlannerOption('braces', 'ceramic', this)">
+                  <i class="fa-solid fa-grip-lines"></i>
+                  <h4>Ceramic &amp; Metal Braces</h4>
+                  <p>Standard traditional realignment</p>
+                </div>
+              </div>
+              
+              <div class="planner-result-card">
+                <h4 id="bracesResultTitle">Invisible Clear Aligners Details</h4>
+                <div class="result-detail-row">
+                  <span class="result-label">Treatment Duration:</span>
+                  <span class="result-value" id="bracesResultTime">6 to 15 months</span>
+                </div>
+                <div class="result-detail-row">
+                  <span class="result-label">Aesthetics &amp; Maintenance:</span>
+                  <span class="result-value" id="bracesResultAesthetic">100% Invisible, Removable for eating</span>
+                </div>
+                <div class="result-detail-row">
+                  <span class="result-label">Estimated Cost Range:</span>
+                  <span class="result-value cost" id="bracesResultCost">₹45,000 - ₹1,20,000</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- RCT Tab Content -->
+            <div class="planner-step" id="plannerStep-rct">
+              <div class="planner-options-grid">
+                <div class="planner-option-card selected" onclick="selectPlannerOption('rct', 'laser', this)">
+                  <i class="fa-solid fa-bolt-lightning"></i>
+                  <h4>Painless Laser RCT</h4>
+                  <p>Ultra-modern rotary cleaning &amp; disinfection</p>
+                </div>
+                <div class="planner-option-card" onclick="selectPlannerOption('rct', 'standard', this)">
+                  <i class="fa-solid fa-hourglass-half"></i>
+                  <h4>Standard Rotary RCT</h4>
+                  <p>Conventional single or multi-session care</p>
+                </div>
+              </div>
+              
+              <div class="planner-result-card">
+                <h4 id="rctResultTitle">Painless Laser RCT Details</h4>
+                <div class="result-detail-row">
+                  <span class="result-label">Treatment Duration:</span>
+                  <span class="result-value" id="rctResultTime">1 to 2 sessions (approx. 45 mins each)</span>
+                </div>
+                <div class="result-detail-row">
+                  <span class="result-label">Anesthesia &amp; Pain Management:</span>
+                  <span class="result-value" id="rctResultLaser">Painless local anesthesia, rotary file tech</span>
+                </div>
+                <div class="result-detail-row">
+                  <span class="result-label">Estimated Cost Range:</span>
+                  <span class="result-value cost" id="rctResultCost">₹3,500 - ₹5,500</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Crowns Tab Content -->
+            <div class="planner-step" id="plannerStep-crowns">
+              <div class="planner-options-grid">
+                <div class="planner-option-card selected" onclick="selectPlannerOption('crowns', 'zirconia', this)">
+                  <i class="fa-solid fa-award"></i>
+                  <h4>Premium Zirconia Crown</h4>
+                  <p>Metal-free, natural looking, high durability</p>
+                </div>
+                <div class="planner-option-card" onclick="selectPlannerOption('crowns', 'ceramic', this)">
+                  <i class="fa-solid fa-shield"></i>
+                  <h4>Porcelain Fused to Metal (PFM)</h4>
+                  <p>Reliable, strong traditional crown</p>
+                </div>
+              </div>
+              
+              <div class="planner-result-card">
+                <h4 id="crownsResultTitle">Premium Zirconia Crown Details</h4>
+                <div class="result-detail-row">
+                  <span class="result-label">Lifespan &amp; Warranty:</span>
+                  <span class="result-value" id="crownsResultWarranty">10 to 15+ years (often with lifetime warranty)</span>
+                </div>
+                <div class="result-detail-row">
+                  <span class="result-label">Material Aesthetic:</span>
+                  <span class="result-value" id="crownsResultAesthetic">100% biocompatible, exact tooth match</span>
+                </div>
+                <div class="result-detail-row">
+                  <span class="result-label">Estimated Cost Range:</span>
+                  <span class="result-value cost" id="crownsResultCost">₹7,000 - ₹15,000</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Kids Tab Content -->
+            <div class="planner-step" id="plannerStep-kids">
+              <div class="planner-options-grid">
+                <div class="planner-option-card selected" onclick="selectPlannerOption('kids', 'consult', this)">
+                  <i class="fa-solid fa-face-smile-wink"></i>
+                  <h4>First Checkup &amp; Counseling</h4>
+                  <p>Friendly exam, soft-spoken guidance for parents</p>
+                </div>
+                <div class="planner-option-card" onclick="selectPlannerOption('kids', 'restorative', this)">
+                  <i class="fa-solid fa-fill"></i>
+                  <h4>Kids Fillings &amp; Sealants</h4>
+                  <p>Painless decay protection &amp; tooth repair</p>
+                </div>
+              </div>
+              
+              <div class="planner-result-card">
+                <h4 id="kidsResultTitle">First Checkup &amp; Counseling Details</h4>
+                <div class="result-detail-row">
+                  <span class="result-label">Duration:</span>
+                  <span class="result-value" id="kidsResultTime">20 to 30 mins</span>
+                </div>
+                <div class="result-detail-row">
+                  <span class="result-label">Child Comfort Strategy:</span>
+                  <span class="result-value" id="kidsResultComfort">Dr. Monica Giri's interactive dental games</span>
+                </div>
+                <div class="result-detail-row">
+                  <span class="result-label">Estimated Cost Range:</span>
+                  <span class="result-value cost" id="kidsResultCost">₹500 - ₹1,000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="planner-footer">
+            <span class="price-estimate">*Cost estimates represent average ranges. Final quote depends on individual clinical conditions.</span>
+            <button class="btn btn-primary btn-sm" id="plannerBookBtn" onclick="openBookingModal('planner')">Book Treatment Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ORTHODONTICS FOCUS (INSTAGRAM HIGHLIGHT)
+         ========================================================================== -->
+    <section class="section braces-spotlight">
+      <div class="container braces-grid">
+        <div class="braces-content" id="bracesContent">
+          <span class="badge badge-accent">Teeth Realignment</span>
+          <h2>Align Your Smile Confidently. Orthodontist Supervised.</h2>
+          <p>Under the specialized supervision of MDS Orthodontist Dr. Amit Giri, we offer customized metallic, ceramic, self-ligating brackets, and advanced clear aligners.</p>
+          <ul class="braces-bullets" id="bracesBullets">
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Aesthetic Integrity:</strong> Ceramic and clear aligners let you smile freely throughout treatment.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Faster Orthodontics:</strong> Self-ligating options reduce treatment duration and checkup visits.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Precise 3D Mapping:</strong> Diagnostic consultation ensures accurate root placement and jaw correction.</li>
+            <li><i class="fa-solid fa-circle-check"></i> <strong>Convenient Payments:</strong> Flexible installments to make dental care affordable.</li>
+          </ul>
+          <button class="btn btn-accent" id="bracesConsultBtn" onclick="openBookingModal('Braces')">Get Braces Consultation</button>
+        </div>
+        
+        <!-- Instagram Post styled card -->
+        <article class="instagram-post-mockup" id="instaCard">
+          <div class="insta-header">
+            <div class="insta-avatar">TB</div>
+            <div class="insta-user-info">
+              <span class="insta-username">teeth.n.braces.nagpur</span>
+              <span class="insta-location">Untkhana, Nagpur</span>
+            </div>
+          </div>
+          <div class="insta-img-container">
+            <img src="assets/braces_ortho.png" alt="Braces treatment clear aligners placement" width="400" height="400">
+          </div>
+          <div class="insta-actions">
+            <i class="fa-solid fa-heart" id="instaHeartBtn" onclick="toggleInstaHeart()"></i>
+            <i class="fa-regular fa-comment"></i>
+            <i class="fa-regular fa-paper-plane"></i>
+          </div>
+          <div class="insta-likes"><span id="instaLikesCount">246</span> likes</div>
+          <div class="insta-caption">
+            <span class="username">teeth.n.braces.nagpur</span>✨ Braces or Aligners? Get a precise alignment plan customized by MDS Orthodontist Dr. Amit Giri! 🦷 Open till 9 PM.
+            <br>
+            <a href="#" class="hashtag">#BracesNagpur</a> <a href="#" class="hashtag">#ClearAligners</a> <a href="#" class="hashtag">#BestDentistNagpur</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         KIDS SPOTLIGHT SECTION
+         ========================================================================== -->
+    <section class="section kids-spotlight-section" id="kids-corner">
+      <div class="container kids-spotlight-grid">
+        <div class="kids-image-frame" id="kidsImageFrame">
+          <img src="assets/kids_dentistry.png" alt="Happy child smiling during dental checkup with Dr. Monica Giri" width="500" height="500">
+        </div>
+        
+        <div class="kids-spotlight-text" id="kidsSpotlightText">
+          <span class="badge" style="background: white; color: var(--accent-dark);">Kids Corner</span>
+          <h2>Does Your Child Dread the Dentist? 👶</h2>
+          <p>At Teeth N Braces Dental Clinic, Dr. Monica Giri's energetic, smiling, and soft-spoken approach makes even the most nervous children feel completely at ease.</p>
+          <p style="margin-bottom: 25px; color: var(--text-muted);">From first tooth checkups and painless fillings to early braces consultations, we focus on interactive education and gentle, pediatric-friendly dentistry so kids actually look forward to their dental visits! 😄</p>
+          
+          <ul class="braces-bullets" id="kidsBullets" style="margin-bottom: 30px;">
+            <li><i class="fa-solid fa-face-smile" style="color: var(--accent-dark);"></i> <strong>Smiling &amp; Energetic:</strong> Dynamic, playful environment for kids.</li>
+            <li><i class="fa-solid fa-child-reaching" style="color: var(--accent-dark);"></i> <strong>Dental Education:</strong> Teaches habits of brushing and flossing correctly.</li>
+            <li><i class="fa-solid fa-shield-halved" style="color: var(--accent-dark);"></i> <strong>Fluoride &amp; Sealants:</strong> Protects teeth from decay early.</li>
+          </ul>
+          <button class="btn btn-accent" style="background: var(--accent-dark);" onclick="openBookingModal('Kids Dentistry')">Schedule a Child Visit</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PATIENT REVIEWS & FEEDBACK
+         ========================================================================== -->
+    <section class="section reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Patient Love</span>
+          <h2>What Our Patients Say</h2>
+          <p>Read review feed details. Every review verified. We maintain a perfect 5.0★ rating standard for our dental practice.</p>
+        </div>
+        
+        <div class="reviews-summary-grid">
+          <!-- Overview Card -->
+          <div class="rating-overview-card" id="ratingOverview">
+            <div class="rating-score" id="avgRatingScore">5.0</div>
+            <div class="rating-stars" id="avgRatingStars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="rating-count"><span id="verifiedReviewsCount">200</span> Verified Google Reviews</div>
+            
+            <button class="btn btn-secondary write-review-toggle" id="writeReviewBtn" onclick="toggleReviewForm()">Write a Review</button>
+            
+            <!-- Submit Review Form (Dynamically saved to local storage) -->
+            <form class="review-form-container" id="reviewForm" onsubmit="handleReviewSubmit(event)">
+              <div class="review-form-group">
+                <label>Select Rating</label>
+                <div class="review-rating-select" id="ratingStarsSelect">
+                  <i class="fa-solid fa-star" data-value="1" onclick="setSelectRating(1)"></i>
+                  <i class="fa-solid fa-star" data-value="2" onclick="setSelectRating(2)"></i>
+                  <i class="fa-solid fa-star" data-value="3" onclick="setSelectRating(3)"></i>
+                  <i class="fa-solid fa-star" data-value="4" onclick="setSelectRating(4)"></i>
+                  <i class="fa-solid fa-star" data-value="5" onclick="setSelectRating(5)"></i>
+                </div>
+              </div>
+              <div class="review-form-group">
+                <label for="reviewName">Your Name</label>
+                <input type="text" id="reviewName" class="review-input" required placeholder="e.g., Ramesh Deshmukh">
+              </div>
+              <div class="review-form-group">
+                <label for="reviewText">Your Experience</label>
+                <textarea id="reviewText" rows="3" class="review-input" required placeholder="Tell others about Dr. Amit or Dr. Monica's treatment..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 10px;" id="submitReviewBtn">Submit Review</button>
+            </form>
+          </div>
+          
+          <!-- Reviews list -->
+          <div class="reviews-feed" id="reviewsFeed">
+            <!-- Review items will load here dynamically via script -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FAQ ACCORDION SECTION
+         ========================================================================== -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Common Questions</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Transparent information about our dental treatments, kids care, brackets, and appointments.</p>
+        </div>
+        
+        <div class="faq-container" id="faqContainer">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+              Why is a husband-wife team beneficial for patient care?
+              <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                At Teeth N Braces, Dr. Amit Giri (MDS Orthodontics) and Dr. Monica Giri (Pediatric Specialist) operate together. This means adults seeking brackets or aesthetic restoration and kids needing gentle decay fillings can be seen during the same appointment block, offering comprehensive family care under one roof.
+              </div>
+            </div>
+          </div>
+          
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+              Is root canal treatment (RCT) really painless?
+              <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Yes! Modern computer-assisted rotary files combined with premium anesthetics make our RCTs extremely comfortable. Dr. Monica Giri's soft-spoken, reassuring technique is highly praised for dissolving all procedural dental anxiety.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+              How late are you open for evening dental checkups?
+              <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                We are open until 9:00 PM in the evening. This makes it convenient for working professionals and school children to get orthodontic consultations or dental treatments without taking time off during active work or class hours.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+              What brackets options do you provide for teeth alignment?
+              <span class="faq-icon"><i class="fa-solid fa-chevron-down"></i></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                Dr. Amit Giri provides traditional metallic brackets, ceramic tooth-colored brackets, self-ligating braces (which require fewer visits and slide smoothly), and modern invisible clear aligner setups (like Invisalign) for maximum aesthetic comfort.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT & LOCATION SECTION
+         ========================================================================== -->
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info-card" id="contactInfoCard">
+          <h3>Contact Details</h3>
+          <ul class="contact-links-list">
+            <li class="contact-link-item">
+              <div class="icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <h4>Call Clinic</h4>
+                <p><a href="tel:09022013669" style="color: white;">090220 13669</a></p>
+              </div>
+            </li>
+            
+            <li class="contact-link-item">
+              <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <h4>Clinic Address</h4>
+                <p>Plot No. 345/B, Medical College Rd,<br>Opposite Holy Family Church, Ashok Square,<br>Untkhana, Nagpur — 440024</p>
+              </div>
+            </li>
+
+            <li class="contact-link-item">
+              <div class="icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <h4>Working Hours</h4>
+                <p>Monday – Saturday: 11:00 AM – 9:00 PM<br>Sunday: By Appointment Only</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="social-links" id="contactSocial">
+            <a href="tel:09022013669" class="social-btn" aria-label="Call clinic directly"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://maps.google.com/?q=Teeth+N+Braces+Dental+Clinic+Untkhana+Nagpur" target="_blank" rel="noopener" class="social-btn" aria-label="Find clinic on Google Maps"><i class="fa-solid fa-map-location-dot"></i></a>
+          </div>
+
+          <!-- Maps Integration Container -->
+          <div class="map-container" id="mapContainer">
+            <a href="https://maps.google.com/?q=Teeth+N+Braces+Dental+Clinic+Untkhana+Nagpur+Plot+No+345/B+Medical+College+Rd" target="_blank" rel="noopener" class="map-link-overlay" aria-label="Open clinic location in Google Maps"></a>
+            <div class="map-mockup">
+              <div class="map-pin">
+                <i class="fa-solid fa-location-crosshairs"></i>
+                Teeth N Braces Dental Clinic
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Appointment Form Card -->
+        <div class="contact-form" id="contactFormCard">
+          <h3>Request Appointment</h3>
+          <form id="mainBookingForm" onsubmit="handleDirectBooking(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="formName">Full Name</label>
+                <input type="text" id="formName" class="form-input" required placeholder="e.g., Vikram Sen">
+              </div>
+              <div class="form-group">
+                <label for="formPhone">Phone Number</label>
+                <input type="tel" id="formPhone" class="form-input" required placeholder="e.g., 090220 XXXXX">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="formService">Requested Service</label>
+                <select id="formService" class="form-input" style="height:48px;" required>
+                  <option value="" disabled selected>Select dental service</option>
+                  <option value="Braces Treatment">Braces Treatment</option>
+                  <option value="Painless Root Canal">Painless Root Canal (RCT)</option>
+                  <option value="Dental Crowns">Dental Crowns &amp; Bridges</option>
+                  <option value="Kids Dentistry">Kids Dentistry (Dr. Monica Giri)</option>
+                  <option value="Smile Designing">Cosmetic Smile Designing</option>
+                  <option value="Deep Fillings">Deep Fillings &amp; Restorations</option>
+                  <option value="General Consultation">General Checkup / Consult</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="formDate">Appointment Date</label>
+                <input type="date" id="formDate" class="form-input" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="formNotes">Additional Notes (Optional)</label>
+              <textarea id="formNotes" rows="3" class="form-input" placeholder="Note down any specific dental pain or request..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;" id="formSubmitBtn">Submit Request <i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer" id="mainFooter">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h4>Teeth N Braces Clinic</h4>
+        <p>Nagpur's 5-star clinic specializing in braces, painless root canal treatments, crowns, and pediatric dentistry. Run by the husband-wife duo of Dr. Amit Giri &amp; Dr. Monica Giri.</p>
+        <span class="badge" style="background: rgba(255,255,255,0.1); color: var(--accent);">5.0★ Rated · 200+ reviews</span>
+      </div>
+      
+      <div class="footer-links">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Our Doctors</a></li>
+          <li><a href="#services">Specialities</a></li>
+          <li><a href="#planner">Cost Planner</a></li>
+          <li><a href="#reviews">Patient Reviews</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h5>Treatments</h5>
+        <ul>
+          <li><a href="#services">Braces Alignment</a></li>
+          <li><a href="#services">Painless RCT</a></li>
+          <li><a href="#services">Dental Crowns</a></li>
+          <li><a href="#kids-corner">Kids Dentistry</a></li>
+          <li><a href="#services">Smile Makeover</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h5>Contacts</h5>
+        <ul style="gap: 15px;">
+          <li><i class="fa-solid fa-phone" style="color: var(--accent); margin-right: 5px;"></i> 090220 13669</li>
+          <li><i class="fa-solid fa-location-dot" style="color: var(--accent); margin-right: 5px;"></i> Plot No. 345/B, Untkhana, Nagpur</li>
+          <li><i class="fa-solid fa-clock" style="color: var(--accent); margin-right: 5px;"></i> Open until 9:00 PM</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Teeth N Braces Dental Clinic. All Rights Reserved. Designed for clinic promotions.</p>
+      <div class="footer-bottom-links">
+        <a href="admin.html" target="_blank" style="color: var(--accent); font-weight:600;"><i class="fa-solid fa-lock"></i> Clinic Portal</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       BOOKING MODAL (POP-UP DIALOG)
+       ========================================================================== -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalTitle">Book Consultation</h3>
+        <button class="modal-close" onclick="closeBookingModal()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <form id="modalBookingForm" onsubmit="handleModalBooking(event)">
+          <div class="form-group">
+            <label for="modalName">Full Name</label>
+            <input type="text" id="modalName" class="form-input" required placeholder="e.g., Rita Sen">
+          </div>
+          <div class="form-group">
+            <label for="modalPhone">Phone Number</label>
+            <input type="tel" id="modalPhone" class="form-input" required placeholder="e.g., 090220 XXXXX">
+          </div>
+          <div class="form-group">
+            <label for="modalService">Dental Treatment</label>
+            <select id="modalService" class="form-input" style="height:48px;" required>
+              <option value="General Consultation" selected>General Consultation</option>
+              <option value="Braces Treatment">Braces &amp; Orthodontics</option>
+              <option value="Painless Root Canal">Painless Root Canal (RCT)</option>
+              <option value="Dental Crowns">Dental Crowns &amp; Bridges</option>
+              <option value="Kids Dentistry">Kids Dentistry (Dr. Monica Giri)</option>
+              <option value="Smile Designing">Cosmetic Smile Designing</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="modalDate">Preferred Date</label>
+              <input type="date" id="modalDate" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="modalTime">Preferred Time</label>
+              <select id="modalTime" class="form-input" style="height:48px;" required>
+                <option value="Morning (11:00 AM - 2:00 PM)">Morning (11 AM - 2 PM)</option>
+                <option value="Afternoon (2:00 PM - 5:00 PM)">Afternoon (2 PM - 5 PM)</option>
+                <option value="Evening (5:00 PM - 9:00 PM)" selected>Evening (5 PM - 9 PM)</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;" id="modalSubmitBtn">Book My Appointment <i class="fa-solid fa-check"></i></button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       WHATSAPP CHAT WIDGET
+       ========================================================================== -->
+  <div class="whatsapp-widget" id="whatsappWidget">
+    <button class="whatsapp-btn" id="waBtn" onclick="toggleChatBox()" aria-label="Open Chat Window"><i class="fa-brands fa-whatsapp"></i></button>
+    <div class="chat-box" id="waChatBox">
+      <div class="chat-header">
+        <img src="assets/dentists_team.png" alt="Teeth N Braces Avatar" width="38" height="38">
+        <div class="chat-doctor-status">
+          <h4>Dr. Monica Giri</h4>
+          <span>Online (Usually replies fast)</span>
+        </div>
+      </div>
+      
+      <div class="chat-body" id="chatBody">
+        <div class="chat-msg">
+          Hello! 😊 I'm Dr. Monica Giri. How can I help you or your child with teeth concerns today?
+          <span class="time" id="chatTime">12:30 PM</span>
+        </div>
+      </div>
+      
+      <div class="chat-input-area">
+        <input type="text" id="chatInputField" placeholder="Ask a dental question..." onkeydown="handleChatSubmit(event)">
+        <button onclick="submitChat()" aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification element -->
+  <div class="toast" id="toastNotification">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMessage">Success Message!</span>
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
